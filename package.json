@@ -1,0 +1,32 @@
+{
+	"name": "adoptable-pet-bot",
+	"version": "1.0.0",
+	"keywords": [
+		"adopt-a-pet",
+		"bot",
+		"twitter"
+	],
+	"homepage": "https://github.com/lynnaloo/adoptable-pet-bot#readme",
+	"bugs": {
+		"url": "https://github.com/lynnaloo/adoptable-pet-bot/issues"
+	},
+	"license": "MIT",
+	"author": "Linda Nichols <lynnaloo@gmail.com>",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/lynnaloo/adoptable-pet-bot.git"
+	},
+	"scripts": {
+		"test": "mocha",
+		"lint": "eslint . --ext .js"
+	},
+	"dependencies": {
+		"adopt-a-pet": "^1.0.4",
+		"twit": "^2.2.5"
+	},
+	"devDependencies": {
+		"eslint": "^3.7.1",
+		"eslint-config-eta": "0.0.6"
+	}
+}
