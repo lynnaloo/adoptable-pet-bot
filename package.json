@@ -21,7 +21,7 @@
 		"lint": "eslint . --ext .js"
 	},
 	"dependencies": {
-		"adopt-a-pet": "^1.0.5",
+		"adopt-a-pet": "^1.0.6",
 		"lodash": "^4.17.3",
 		"twit": "^2.2.5"
 	},
