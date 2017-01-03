@@ -12,7 +12,6 @@
 	},
 	"license": "MIT",
 	"author": "Linda Nichols <lynnaloo@gmail.com>",
-	"main": "index.js",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/lynnaloo/adoptable-pet-bot.git"
@@ -22,11 +21,13 @@
 		"lint": "eslint . --ext .js"
 	},
 	"dependencies": {
-		"adopt-a-pet": "^1.0.4",
+		"adopt-a-pet": "^1.0.5",
+		"lodash": "^4.17.3",
 		"twit": "^2.2.5"
 	},
 	"devDependencies": {
 		"eslint": "^3.7.1",
-		"eslint-config-eta": "0.0.6"
+		"eslint-config-eta": "0.0.6",
+		"mocha": "^3.2.0"
 	}
 }
