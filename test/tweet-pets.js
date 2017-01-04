@@ -39,27 +39,11 @@ describe('tweet-pets', () => {
          size: 'large',
          sex: 'male',
          url: 'www.test.com',
-         species: 'Cat'
+         species: 'Cat',
+         imageUrl: 'https://s3.amazonaws.com/pet-uploads.adoptapet.com/8/a/0/240800556.jpg'
       };
 
       assert(tweetPets.generateText(testPet));
-    });
-
-    // integration tests
-    it.skip('test tweet pets functions', (next) => {
-      const twitterConfig = {
-        consumer_key: process.env.TWIT_API_KEY,
-        consumer_secret: process.env.TWIT_API_KEY_SECRET,
-        access_token: process.env.TWIT_ACCESS_TOKEN,
-        access_token_secret: process.env.TWIT_ACCESS_TOKEN_SECRET,
-        timeout_ms: process.env.TWIT_TIMEOUT_MS,
-      };
-      const tweetPets = new TweetPets(twitterConfig, process.env.ADOPT_API_KEY, process.env.SHELTER_ID);
-      tweetPets.tweet()
-      .then((data) => {
-        assert(data);
-        next();
-      });
     });
   });
 });

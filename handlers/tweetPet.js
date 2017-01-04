@@ -11,8 +11,6 @@ module.exports.tweetPet = (event, context, callback) => {
   };
   const tweetPets = new TweetPets(twitterConfig, process.env.ADOPT_API_KEY, process.env.SHELTER_ID);
 
-  //console.log('debug:', twitterConfig);
-
   tweetPets.tweet()
   .then((data) => {
     const response = {
@@ -25,7 +23,7 @@ module.exports.tweetPet = (event, context, callback) => {
 
     callback(null, response);
   })
-  .catch(function(error) {
-    console.log('Error calling Lambda function:', error);
+  .catch((error) => {
+    console.log('Error executing Lambda function:', error);
   });
 };
