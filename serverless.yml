@@ -38,7 +38,7 @@ provider:
     TWIT_TIMEOUT_MS: ${file(./env.json):TWIT_TIMEOUT_MS}
     SHELTER_ID: ${file(./env.json):SHELTER_ID}
     ADOPT_API_KEY: ${file(./env.json):ADOPT_API_KEY}
-    SHELTER_NAME: ${file(./env.json):SHELTER_ID}
+    SHELTER_NAME: ${file(./env.json):SHELTER_NAME}
 
 # you can add packaging information here
 #package:
