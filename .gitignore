@@ -36,6 +36,7 @@ env.json
 *.swp
 coverage*
 database.json
+pet-photo.jpg
 
 .serverless
 awscli-bundle
