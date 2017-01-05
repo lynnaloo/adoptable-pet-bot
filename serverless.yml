@@ -56,7 +56,7 @@ functions:
     memorySize: 512 # default is 1024
     timeout: 10 # default is 6
     events:
-      - schedule: rate(2 hours)
+      - schedule: rate(1 hour)
 
 #    Define function environment variables here
 #    environment:
