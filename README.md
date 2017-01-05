@@ -1,6 +1,9 @@
 # Adoptable Pet Bot
 
-> :feet: :cat: :dog: Schedules tweets about adoptable pets using Serverless framework and AWS Lambda.
+> :feet: :cat: :dog: 
+
+> Tweets adoptable pets (from Adopt-a-Pet API) using Serverless framework and AWS Lambda.
+
 > Inspired by work on [Cute Pets Norfolk](https://github.com/Code4HR/CutiesInHamptonRoads)
 
 ## Install
