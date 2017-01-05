@@ -37,7 +37,7 @@ describe('tweet-pets', () => {
          name: 'Cheshire',
          breed: 'Domestic Mediumhair',
          size: 'large',
-         sex: 'male',
+         sex: 'Male',
          url: 'www.test.com',
          species: 'Cat',
          imageUrl: 'https://s3.amazonaws.com/pet-uploads.adoptapet.com/8/a/0/240800556.jpg'
