@@ -1,23 +1,59 @@
 # Adoptable Pet Bot
 
-Uses AWS Lambda and Serverless Framework to Tweet Random Adoptable Pets from Adopt-a-Pet.
+> :feet: :cat: :dog: Schedules tweets about adoptable pets using Serverless framework and AWS Lambda.
+> Inspired by work on [Cute Pets Norfolk](https://github.com/Code4HR/CutiesInHamptonRoads)
 
-Inspired by work on [Cute Pets Norfolk](https://github.com/Code4HR/CutiesInHamptonRoads).
+## Install
 
-## Setup
-
--   Install Node 4.
--   Clone this repository and install modules:
-```
-git clone https://github.com/lynnaloo/adoptable-pet-bot.git
-npm i -g serverless
-npm i
+With [node](https://nodejs.org/) installed, install the Serverless Architecture:
 
 ```
--   To run `serverless` commands with your AWS account, you will need to [setup your AWS account credentials](https://serverless.com/framework/docs/providers/aws/guide/credentials) on your machine.
--   Create a `env.json` file or rename `same_env.json` and enter credentials. Note
-that you need Twitter and Adopt-a-Pet API keys to use this bot.
--   `serverless deploy` or invoke the serverless function locally:
+$ npm i -g serverless
+```
+
+Clone this repository
+
+```
+$ git clone git@github.com:lynnaloo/adoptable-pet-bot.git
+```
+
+Install dependencies
+
+```
+$ npm i
+```
+
+## Setup and Testing
+
+Setup your Account Provider and Credentials
+
+*   [AWS Lambda](https://serverless.com/framework/docs/providers/aws/setup)
+*   [AWS account credentials](https://serverless.com/framework/docs/providers/aws/guide/credentials)
+
+Run Unit Tests
+```
+npm test
+```
+
+Test Lambda Function locally
 ```
 serverless invoke local -l -f tweetPet
 ```
+
+## Deployment
+
+Deploy Lambda Functions
+
+```
+$ sls deploy -v
+```
+
+## See Also
+
+*   [Adopt-a-Pet API](https://github.com/lynnaloo/adopt-a-pet)
+*   [Serverless Framwork](http://www.serverless.com)
+*   [Cute Pets Norfolk](https://github.com/Code4HR/CutiesInHamptonRoads)
+
+## License
+
+MIT
