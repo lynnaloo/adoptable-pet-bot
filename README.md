@@ -8,7 +8,7 @@
 
 ## Install
 
-With [node](https://nodejs.org/) installed, install the Serverless Architecture:
+With [node 4.3](https://nodejs.org/) installed, install the Serverless Architecture:
 
 ```
 $ npm i -g serverless

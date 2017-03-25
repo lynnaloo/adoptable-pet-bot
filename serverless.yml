@@ -1,35 +1,14 @@
 # Adoptable Pet Bot
 
 service: adoptable-pet-bot
-
-# You can pin your service to only deploy with a specific Serverless version
-# Check out our docs for more details
-# frameworkVersion: "=X.X.X"
+frameworkVersion: ">=1.8.0"
 
 provider:
   name: aws
   runtime: nodejs4.3
+  region: us-east-1
 
-# you can overwrite defaults here
-#  stage: dev
-#  region: us-east-1
-
-# you can add statements to the Lambda function's IAM Role here
-#  iamRoleStatements:
-#    - Effect: "Allow"
-#      Action:
-#        - "s3:ListBucket"
-#      Resource: { "Fn::Join" : ["", ["arn:aws:s3:::", { "Ref" : "ServerlessDeploymentBucket" } ] ]  }
-#    - Effect: "Allow"
-#      Action:
-#        - "s3:PutObject"
-#      Resource:
-#        Fn::Join:
-#          - ""
-#          - - "arn:aws:s3:::"
-#            - "Ref" : "ServerlessDeploymentBucket"
-
-# you can define service wide environment variables here
+# service wide environment variables
   environment:
     TWIT_API_KEY: ${file(./env.json):TWIT_API_KEY}
     TWIT_API_KEY_SECRET: ${file(./env.json):TWIT_API_KEY_SECRET}
@@ -40,24 +19,11 @@ provider:
     ADOPT_API_KEY: ${file(./env.json):ADOPT_API_KEY}
     SHELTER_NAME: ${file(./env.json):SHELTER_NAME}
 
-# you can add packaging information here
-#package:
-#  include:
-#    - include-me.js
-#    - include-me-dir/**
-#  exclude:
-#    - exclude-me.js
-#    - exclude-me-dir/**
-
 functions:
   tweetPet:
     handler: handlers/tweetPet.tweetPet
-    description: Tweets Adoptable Pets on a Schedule # description to publish to AWS
-    memorySize: 512 # default is 1024
-    timeout: 10 # default is 6
+    description: Tweets Adoptable Pets on a Schedule
+    memorySize: 512 
+    timeout: 10
     events:
       - schedule: rate(6 hours)
-
-#    Define function environment variables here
-#    environment:
-#      variable2: value2
