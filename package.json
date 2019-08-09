@@ -22,7 +22,7 @@
 	},
 	"dependencies": {
 		"adopt-a-pet": "^1.0.8",
-		"lodash": "^4.17.3",
+		"lodash": "^4.17.13",
 		"twit": "^2.2.5"
 	},
 	"devDependencies": {
